@@ -13,6 +13,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html,
+body,
+#root {
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,6 +40,11 @@ code {
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
