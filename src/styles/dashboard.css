@@ -307,7 +307,7 @@
    flex-direction: column;
    justify-content: space-between;
    cursor: pointer;
-   position: relative;
+   position: sticky;
    z-index: 200000;
  }
 

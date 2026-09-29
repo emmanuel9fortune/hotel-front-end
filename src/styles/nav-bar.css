@@ -124,7 +124,7 @@
 
  .menu-icon {
    width: 35px;
-   height: 25px;
+   height: 17px;
    display: none;
    flex-direction: column;
    justify-content: space-between;
@@ -135,7 +135,7 @@
 
  .menu-icon span {
    display: block;
-   height: 4px;
+   height: 1.4px;
    width: 100%;
    --tw-bg-opacity: 1;
    background-color: #fff;
@@ -150,7 +150,7 @@
 
  /* Menu open state */
  .menu-icon.open span:nth-child(1) {
-   transform: translateY(10px) rotate(45deg);
+   transform: translateY(6px) rotate(45deg);
    background-color: #000;
  }
  
