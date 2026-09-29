@@ -11,6 +11,14 @@ function Head({stick, view}) {
         menu_icon.classList.toggle("open");
         const menu_dropdown = document.querySelector(".menu_dropDown")
         menu_dropdown.classList.toggle("dropDown");
+
+        if (menu_dropdown.classList.contains("dropDown")) {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+        } else {
+        document.documentElement.style.overflow = "";
+        document.body.style.overflow = "";
+        }
     }
 
     const navigate = useNavigate()
