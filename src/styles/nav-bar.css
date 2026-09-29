@@ -6,16 +6,17 @@
  }
 
  .head_container {
-   width: 100%;
-   display: flex;
-   align-items: center;
-   position: fixed;
-   top: 0;
-   justify-content: center;
-   z-index: 10000;
-   padding: 5px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  padding: 5px 0;
   transition: background-color 0.3s, transform 0.3s;
- }
+}
 
  .desk_header_logo{
   padding: 10px;
@@ -130,7 +131,7 @@
    justify-content: space-between;
    cursor: pointer;
    position: relative;
-   z-index: 999999999999999999999999999;
+   z-index: 100001;
  }
 
  .menu-icon span {
@@ -141,7 +142,6 @@
    background-color: #fff;
    border-radius: 2px;
    transition: all 0.3s ease-in-out;
-   z-index: 999999999999999999999999999;
  }
 
  .scrolled .menu-icon span {
@@ -183,7 +183,7 @@
  }
  
 
- .dropDown {
+ .menu_dropDown.dropDown {
    padding-top: 80px;
    height: 100%;
  }
