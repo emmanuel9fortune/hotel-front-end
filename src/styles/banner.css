@@ -1,0 +1,117 @@
+.banner_container {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+}
+
+.banner_video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* ⭐ Black gradient overlay (top → transparent bottom) */
+.banner_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  background: #000000a1
+    /* radial-gradient(
+      circle,
+      #00000017 0%,
+      #000000ad 60%,
+      #000000bd 100%
+    ) */
+
+}
+
+.banner_container_text {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  z-index: 2;
+  color: white;
+  padding: 70px 60px; /* similar spacing to Starwood */
+  width: 100%;
+}
+
+.banner_text_body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner_container_text h1{
+  font-weight: 300;
+  font-size: 60px;
+  width: 80%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.banner_container_text p{
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.banner_container_text .head_logbtn{
+  margin-top: 40px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+}
+
+.banner_container_text .head_logbtn p{
+  font-weight: 20px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 988px) {
+  .banner_container {
+    height: 100%;
+  }
+    
+  .banner_container_text {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 10;
+    color: white;
+    padding: 120px 20px; /* similar spacing to Starwood */
+  }
+
+  .banner_container_text h1{
+    font-weight: lighter;
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .banner_container_text p{
+    margin-top: 20px;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,155 @@
+.signup_header{
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+}
+
+.signup_header_{
+    display: flex;
+    align-items: center;
+}
+
+.signup_header__{
+    display: flex;
+    align-items: center;
+}
+
+.signup_header__>p{
+    font-weight: 600;
+    color: #6d6d6d;
+}
+
+.login_lnk{
+    margin: 0 20px;
+    background-color: #cecece;
+    padding: 10px 15px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login_lnk p{
+    color: #000;
+}
+
+.signup_form{
+    padding: 0 10% 0 10%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.signup_form h1{
+    width: 80%;
+}
+
+.signup_types{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.signup_types div{
+    width: 100px;
+    cursor: pointer;
+    transition: 2s;
+    display: flex;
+    justify-content: center;
+}
+
+.signup_types div p{
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+.signup_types_{
+    background-color: #070707;
+    display: flex;
+    justify-content: center;
+    transition: 2s;
+    color: #fff;
+}
+
+.contact_form_input_field h4{
+    margin: 20px 0;
+}
+
+.password_{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.password_ p{
+    margin: 0 10px;
+    color: grey;
+    font-weight: 500;
+}
+
+.password_strength{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password_strength div{
+    width: 22%;
+    height: 5px;
+    background-color: #949494;
+    margin: 0 5px;
+}
+
+.signup_txt{
+    font-weight: 600;
+    color: #6d6d6d;
+    line-height: 25px;
+}
+
+.signup_txt span{
+    color: goldenrod;
+}
+
+.sidebar_abs{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background-color: #1d1d1d15;
+    z-index: -1;
+}
+
+
+
+
+
+
+@media (max-width: 650px) {
+    .signup_form h1{
+        font-size: 40px;
+        width: 100%;
+    }
+    
+    .signup_form{
+        padding: 10px 5% 0 5%;
+        width: 100%;
+    }
+
+    .signup_header{
+        padding: 10px 5%;
+    }
+
+    .signup_header__>p{
+        display: none;
+    }
+
+    .sidebar_abs{
+        display: none;
+    }
+}

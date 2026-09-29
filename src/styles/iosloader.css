@@ -1,0 +1,39 @@
+.ios-loader {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  margin: 0 10px;
+  justify-content: center;
+}
+
+.ios-loader .blade {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 11%;
+  height: 28%;
+  background: #8e8e93; /* Classic iOS Gray */
+  border-radius: 50px;
+  transform-origin: center;
+  animation: ios-fade 1s linear infinite;
+}
+
+/* Position and delay each blade */
+.ios-loader .blade:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translate(0, -130%); animation-delay: 0s; }
+.ios-loader .blade:nth-child(2) { transform: translate(-50%, -50%) rotate(30deg) translate(0, -130%); animation-delay: -0.916s; }
+.ios-loader .blade:nth-child(3) { transform: translate(-50%, -50%) rotate(60deg) translate(0, -130%); animation-delay: -0.833s; }
+.ios-loader .blade:nth-child(4) { transform: translate(-50%, -50%) rotate(90deg) translate(0, -130%); animation-delay: -0.75s; }
+.ios-loader .blade:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg) translate(0, -130%); animation-delay: -0.666s; }
+.ios-loader .blade:nth-child(6) { transform: translate(-50%, -50%) rotate(150deg) translate(0, -130%); animation-delay: -0.583s; }
+.ios-loader .blade:nth-child(7) { transform: translate(-50%, -50%) rotate(180deg) translate(0, -130%); animation-delay: -0.5s; }
+.ios-loader .blade:nth-child(8) { transform: translate(-50%, -50%) rotate(210deg) translate(0, -130%); animation-delay: -0.416s; }
+.ios-loader .blade:nth-child(9) { transform: translate(-50%, -50%) rotate(240deg) translate(0, -130%); animation-delay: -0.333s; }
+.ios-loader .blade:nth-child(10) { transform: translate(-50%, -50%) rotate(270deg) translate(0, -130%); animation-delay: -0.25s; }
+.ios-loader .blade:nth-child(11) { transform: translate(-50%, -50%) rotate(300deg) translate(0, -130%); animation-delay: -0.166s; }
+.ios-loader .blade:nth-child(12) { transform: translate(-50%, -50%) rotate(330deg) translate(0, -130%); animation-delay: -0.083s; }
+
+@keyframes ios-fade {
+  from { opacity: 1; }
+  to { opacity: 0.25; }
+}

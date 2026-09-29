@@ -1,0 +1,263 @@
+.headImg {
+   width: 60px;
+   margin: 10px 0;
+   border-radius: 50%;
+   background-color: #f3eee7;
+ }
+
+ .head_container {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   justify-content: center;
+   z-index: 10000;
+   padding: 5px 0;
+  transition: background-color 0.3s, transform 0.3s;
+ }
+
+ .desk_header_logo{
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+ }
+
+ .desk_header_logo>img{
+    width: 50px;
+ }
+
+ .desk_header_logo>h3{
+  text-decoration: none;
+ }
+
+ 
+.head_container.scrolled {
+  background-color: #f3eee7; /* change to whatever color */
+}
+
+.head_container.hidden {
+  transform: translateY(-100%);
+}
+
+ .head {
+   width: 90%;
+   display: flex;
+   align-items: center;
+   z-index: 1000;
+  transition: background-color 0.3s, transform 0.3s;
+ }
+
+ .head_links {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   padding-right: 50px;
+ }
+
+ .head_links>p {
+   padding: 0 10px;
+   cursor: pointer;
+ }
+
+ .scrolled .header_links{
+  color: #000;
+ }
+
+ .header_links{
+  text-decoration: none;
+  padding: 0 10px;
+  margin: 0 25px;
+  color: #fff;
+  text-transform: uppercase;
+ }
+
+ .header_links p{
+    font-weight: 800;
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.header_links>p::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #000;
+    transition: width 0.4s ease;
+}
+
+.header_links>p:hover::after{
+    width: 100%;
+}
+ 
+ .scrolled .head_logbtn{
+  color: #000;
+   border: 1px solid #000;
+ }
+
+ .head_logbtn {
+   width: fit-content;
+   --tw-bg-opacity: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-decoration:none;
+   padding: 10px 15px;
+   transition: transform 0.1s ease-in-out;
+   user-select: none;
+   border: 1px solid #fff;
+ }
+ 
+ .head_logbtn:active {
+   transform: scale(0.9); /* Shrinks button when clicked */
+ }
+
+ .head_logbtn>p{
+  margin: 0 5px;
+ }
+
+ .menu-icon {
+   width: 35px;
+   height: 25px;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   cursor: pointer;
+   position: relative;
+   z-index: 999999999999999999999999999;
+ }
+
+ .menu-icon span {
+   display: block;
+   height: 4px;
+   width: 100%;
+   --tw-bg-opacity: 1;
+   background-color: #fff;
+   border-radius: 2px;
+   transition: all 0.3s ease-in-out;
+   z-index: 999999999999999999999999999;
+ }
+
+ .scrolled .menu-icon span {
+   background-color: #000;
+ }
+
+ /* Menu open state */
+ .menu-icon.open span:nth-child(1) {
+   transform: translateY(10px) rotate(45deg);
+   background-color: #000;
+ }
+ 
+ .menu-icon.open span:nth-child(2) {
+   opacity: 0;
+ }
+
+ .menu-icon.open span:nth-child(3) {
+   transform: translateY(-12px) rotate(-45deg);
+   background-color: #000;
+ }
+
+ .menu_dropDown {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background-color: #fff;
+   overflow: auto;
+   height: 0;
+   transition: height .3s ease-in-out;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   border-radius: 4px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   overflow-y: scroll;
+   user-select: none;
+ }
+ 
+
+ .dropDown {
+   padding-top: 80px;
+   height: 100%;
+ }
+
+ .dropdown_slide {
+   width: 90%;
+   display: flex;
+   align-items: center;
+   background-color: #fff;
+   height: 50px;
+   padding: 0 15px;
+   justify-content: space-between;
+   margin: 10px 0;
+   cursor: pointer;
+   border-bottom: 1px solid #000;
+ }
+
+ .dropdown_slide>p {
+   font-size: 19px;
+   font-weight: 300;
+ }
+
+ .menu_mobile_logbtn {
+   width: 90%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 50px;
+   --tw-bg-opacity: 1;
+   background-color: transparent;
+   color: #000;
+   font-size: 25;
+   font-weight: 800;
+   text-decoration: none;
+   padding: 20px 10px;
+   user-select: none;
+   border: 1px solid #000;
+ }
+
+ .menu_mobile_logbtn>p{
+  margin: 0 10px;
+  font-weight: 300;
+ }
+
+
+
+
+@media (max-width: 988px) {
+
+   .head_links,
+   .head_logbtn {
+     display: none;
+   }
+
+   .dropdown_slide,
+   .menu_mobile_logbtn {
+     width: 90%;
+   }
+
+   .menu-icon {
+     display: flex;
+    z-index: 999999999999999999999999999;
+   }
+
+   .head {
+     width: 90%;
+     justify-content: space-between;
+   }
+   
+  .head_container {
+    padding: 5px 0;
+  }
+
+  .desk_header_logo>h3{
+    font-size: 16px;
+  }
+}

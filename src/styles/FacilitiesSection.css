@@ -1,0 +1,386 @@
+.facilities-section {
+  width: 100%;
+  background: #f7f5f0;
+  padding: 130px 0;
+  color: #1d1d1b;
+}
+
+.facilities-container {
+  width: min(1240px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.facilities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  margin-bottom: 100px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid rgba(29, 29, 27, 0.15);
+}
+
+.facilities-header-left {
+  max-width: 700px;
+}
+
+.facilities-eyebrow {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8b7655;
+}
+
+.facilities-header h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.98;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.facilities-header h2 span {
+  color: #8b7655;
+  font-style: italic;
+}
+
+.facilities-header-right {
+  width: 300px;
+  padding-bottom: 5px;
+}
+
+.facilities-header-right p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #66635e;
+}
+
+/* =========================
+   FACILITY ITEM
+========================= */
+
+.facilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.facility-item {
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.facility-item.facility-reverse {
+  grid-template-columns: 0.75fr 1.45fr;
+}
+
+.facility-item.facility-reverse .facility-image-wrapper {
+  order: 2;
+}
+
+.facility-item.facility-reverse .facility-content {
+  order: 1;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.facility-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.facility-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+
+.facility-item:hover .facility-image {
+  transform: scale(1.035);
+}
+
+.facility-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.08),
+    transparent 40%,
+    rgba(0, 0, 0, 0.18)
+  );
+  pointer-events: none;
+}
+
+/* Number */
+
+.facility-number {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  left: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: white;
+
+  font-size: 11px;
+  letter-spacing: 1px;
+
+  backdrop-filter: blur(4px);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.facility-content {
+  max-width: 410px;
+}
+
+.facility-small-title {
+  display: block;
+  margin-bottom: 22px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: #8b7655;
+}
+
+.facility-content h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.facility-line {
+  width: 55px;
+  height: 1px;
+  background: #8b7655;
+
+  margin: 30px 0;
+}
+
+.facility-content p {
+  margin: 0;
+
+  max-width: 390px;
+
+  font-size: 14px;
+  line-height: 1.9;
+  color: #68655f;
+}
+
+.facility-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 32px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #1d1d1b;
+  cursor: pointer;
+}
+
+.facility-link span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid rgba(29, 29, 27, 0.3);
+
+  font-size: 15px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.facility-link:hover span {
+  background: #1d1d1b;
+  color: white;
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .facilities-section {
+    padding: 100px 0;
+  }
+
+  .facilities-container {
+    width: min(100% - 50px, 700px);
+  }
+
+  .facilities-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  .facilities-header-right {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .facilities-list {
+    gap: 90px;
+  }
+
+  .facility-item,
+  .facility-item.facility-reverse {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .facility-item.facility-reverse .facility-image-wrapper,
+  .facility-item.facility-reverse .facility-content {
+    order: initial;
+  }
+
+  .facility-image-wrapper {
+    height: 500px;
+  }
+
+  .facility-content {
+    max-width: 600px;
+  }
+
+  .facility-content p {
+    max-width: 520px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .facilities-section {
+    padding: 75px 0;
+  }
+
+  .facilities-container {
+    width: calc(100% - 36px);
+  }
+
+  .facilities-header {
+    margin-bottom: 55px;
+    padding-bottom: 30px;
+  }
+
+  .facilities-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    margin-bottom: 18px;
+  }
+
+  .facilities-header h2 {
+    font-size: clamp(42px, 12vw, 58px);
+    letter-spacing: -1.5px;
+  }
+
+  .facilities-header-right p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .facilities-list {
+    gap: 70px;
+  }
+
+  .facility-item,
+  .facility-item.facility-reverse {
+    gap: 28px;
+  }
+
+  .facility-image-wrapper {
+    height: 390px;
+  }
+
+  .facility-number {
+    top: 15px;
+    left: 15px;
+    width: 42px;
+    height: 42px;
+    font-size: 10px;
+  }
+
+  .facility-small-title {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .facility-content h3 {
+    font-size: 35px;
+    line-height: 1.05;
+  }
+
+  .facility-line {
+    margin: 22px 0;
+  }
+
+  .facility-content p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .facility-link {
+    margin-top: 25px;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
+  .facility-link span {
+    width: 32px;
+    height: 32px;
+  }
+}

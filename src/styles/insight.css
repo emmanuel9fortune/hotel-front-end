@@ -1,0 +1,56 @@
+.insights_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 150px 10%;
+}
+
+.insights_container h1{
+    width: 100%;
+    margin: 50px 0;
+}
+
+.insights_container p{
+    margin: 20px 0;
+    font-size: 18px;
+    width: 100%;
+    max-width: 80%;
+}
+
+.insights_container h2{
+    margin: 20px 0 10px 0;
+}
+
+.insights_container h3{
+    color: #575757;
+}
+
+.insight_banner{
+    background-image: url('/public/assets/inban.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+}
+
+.insight_banner_overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #07070781;
+}
+
+
+@media (max-width: 650px) {
+    .insights_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20% 3%;
+    }
+
+    .insight_banner{
+        background-size: contain;
+        height: 300px;
+    }
+}
